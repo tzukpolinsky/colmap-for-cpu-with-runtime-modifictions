@@ -79,7 +79,8 @@ public:
     typedef typename Distance::ElementType ElementType;
     typedef typename Distance::ResultType DistanceType;
     typedef NNIndex<Distance> IndexType;
-
+    bool GetLoaded(){return loaded_;};
+    void SetLoaded(bool value){ loaded_ = value;};
     Index(const IndexParams& params, Distance distance = Distance() )
         : index_params_(params)
     {

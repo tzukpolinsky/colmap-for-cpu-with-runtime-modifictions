@@ -396,9 +396,13 @@ void SiftFeatureExtractorThread::Run() {
               sift_options_, image_data.bitmap, sift_gpu.get(),
               &image_data.keypoints, &image_data.descriptors);
         } else {
+          std::unique_ptr<VlSiftFilt, void (*)(VlSiftFilt*)> sift(
+              vl_sift_new(image_data.bitmap.Width(), image_data.bitmap.Height(), sift_options_.num_octaves,
+                          sift_options_.octave_resolution, sift_options_.first_octave),
+              &vl_sift_delete);
           success = ExtractSiftFeaturesCPU(sift_options_, image_data.bitmap,
                                            &image_data.keypoints,
-                                           &image_data.descriptors);
+                                           &image_data.descriptors,sift.get());
         }
         if (success) {
           ScaleKeypoints(image_data.bitmap, image_data.camera,

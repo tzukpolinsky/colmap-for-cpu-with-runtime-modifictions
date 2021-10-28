@@ -31,20 +31,6 @@
 
 #include "feature/sift.h"
 
-#include <array>
-#include <fstream>
-#include <memory>
-
-#include "FLANN/flann.hpp"
-#include "SiftGPU/SiftGPU.h"
-#include "VLFeat/covdet.h"
-#include "VLFeat/sift.h"
-#include "feature/utils.h"
-#include "util/cuda.h"
-#include "util/logging.h"
-#include "util/math.h"
-#include "util/misc.h"
-#include "util/opengl_utils.h"
 
 namespace colmap {
 namespace {
@@ -205,14 +191,13 @@ void FindNearestNeighborsFLANN(
     Eigen::Matrix<int, Eigen::Dynamic, Eigen::Dynamic, Eigen::RowMajor>*
         indices,
     Eigen::Matrix<int, Eigen::Dynamic, Eigen::Dynamic, Eigen::RowMajor>*
-        distances) {
+        distances,
+    flann::Index<flann::L2<uint8_t>> &index) {
   if (query.rows() == 0 || database.rows() == 0) {
     return;
   }
-
-  const size_t kNumNearestNeighbors = 2;
-  const size_t kNumTreesInForest = 4;
-
+  const size_t kNumNearestNeighbors = 128;
+  const size_t kNumTreesInForest = 1;
   const size_t num_nearest_neighbors =
       std::min(kNumNearestNeighbors, static_cast<size_t>(database.rows()));
 
@@ -220,20 +205,22 @@ void FindNearestNeighborsFLANN(
   distances->resize(query.rows(), num_nearest_neighbors);
   const flann::Matrix<uint8_t> query_matrix(const_cast<uint8_t*>(query.data()),
                                             query.rows(), 128);
-  const flann::Matrix<uint8_t> database_matrix(
-      const_cast<uint8_t*>(database.data()), database.rows(), 128);
 
   flann::Matrix<int> indices_matrix(indices->data(), query.rows(),
                                     num_nearest_neighbors);
   std::vector<float> distances_vector(query.rows() * num_nearest_neighbors);
   flann::Matrix<float> distances_matrix(distances_vector.data(), query.rows(),
                                         num_nearest_neighbors);
-  flann::Index<flann::L2<uint8_t>> index(
-      database_matrix, flann::KDTreeIndexParams(kNumTreesInForest));
-  index.buildIndex();
+
+  const flann::Matrix<uint8_t> database_matrix(
+      const_cast<uint8_t*>(database.data()), database.rows(), 128);
+  if (!index.GetLoaded()) {
+    index = flann::Index<flann::L2<uint8_t>>(
+        database_matrix, flann::KDTreeIndexParams(kNumTreesInForest));
+    index.buildIndex();
+  }
   index.knnSearch(query_matrix, indices_matrix, distances_matrix,
                   num_nearest_neighbors, flann::SearchParams(128));
-
   for (Eigen::Index query_index = 0; query_index < indices->rows();
        ++query_index) {
     for (Eigen::Index k = 0; k < indices->cols(); ++k) {
@@ -274,29 +261,23 @@ size_t FindBestMatchesOneWayFLANN(
         second_best_dist = dist;
       }
     }
-
     // Check if any match found.
     if (best_i2 == -1) {
       continue;
     }
-
     const float best_dist_normed =
         std::acos(std::min(kDistNorm * best_dist, 1.0f));
-
     // Check if match distance passes threshold.
     if (best_dist_normed > max_distance) {
       continue;
     }
-
     const float second_best_dist_normed =
         std::acos(std::min(kDistNorm * second_best_dist, 1.0f));
-
     // Check if match passes ratio test. Keep this comparison >= in order to
     // ensure that the case of best == second_best is detected.
     if (best_dist_normed >= max_ratio * second_best_dist_normed) {
       continue;
     }
-
     num_matches += 1;
     (*matches)[d1_idx] = best_i2;
   }
@@ -402,8 +383,8 @@ bool SiftMatchingOptions::Check() const {
 
 bool ExtractSiftFeaturesCPU(const SiftExtractionOptions& options,
                             const Bitmap& bitmap, FeatureKeypoints* keypoints,
-                            FeatureDescriptors* descriptors) {
-  CHECK(options.Check());
+                            FeatureDescriptors* descriptors,VlSiftFilt* sift) {
+  /*CHECK(options.Check());
   CHECK(bitmap.IsGrey());
   CHECK_NOTNULL(keypoints);
 
@@ -412,126 +393,119 @@ bool ExtractSiftFeaturesCPU(const SiftExtractionOptions& options,
 
   if (options.darkness_adaptivity) {
     WarnDarknessAdaptivityNotAvailable();
-  }
+  }*/
 
   // Setup SIFT extractor.
-  std::unique_ptr<VlSiftFilt, void (*)(VlSiftFilt*)> sift(
+  /*std::unique_ptr<VlSiftFilt, void (*)(VlSiftFilt*)> sift(
       vl_sift_new(bitmap.Width(), bitmap.Height(), options.num_octaves,
                   options.octave_resolution, options.first_octave),
       &vl_sift_delete);
   if (!sift) {
     return false;
-  }
+  }*/
 
-  vl_sift_set_peak_thresh(sift.get(), options.peak_threshold);
-  vl_sift_set_edge_thresh(sift.get(), options.edge_threshold);
+  vl_sift_set_peak_thresh(sift, options.peak_threshold);
+  vl_sift_set_edge_thresh(sift, options.edge_threshold);
 
   // Iterate through octaves.
   std::vector<size_t> level_num_features;
   std::vector<FeatureKeypoints> level_keypoints;
   std::vector<FeatureDescriptors> level_descriptors;
-  bool first_octave = true;
-  while (true) {
-    if (first_octave) {
-      const std::vector<uint8_t> data_uint8 = bitmap.ConvertToRowMajorArray();
-      std::vector<float> data_float(data_uint8.size());
-      for (size_t i = 0; i < data_uint8.size(); ++i) {
-        data_float[i] = static_cast<float>(data_uint8[i]) / 255.0f;
-      }
-      if (vl_sift_process_first_octave(sift.get(), data_float.data())) {
+  const std::vector<uint8_t> data_uint8 = bitmap.ConvertToRowMajorArray();
+  std::vector<float> data_float(data_uint8.size());
+  for (size_t i = 0; i < data_uint8.size(); ++i) {
+    data_float[i] = static_cast<float>(data_uint8[i]) / 255.0f;
+  }
+  if (!vl_sift_process_first_octave(sift, data_float.data())) {
+    while (true) {
+      if (vl_sift_process_next_octave(sift)) {
         break;
       }
-      first_octave = false;
-    } else {
-      if (vl_sift_process_next_octave(sift.get())) {
-        break;
+      // Detect keypoints.
+      vl_sift_detect(sift);
+
+      // Extract detected keypoints.
+      const VlSiftKeypoint* vl_keypoints = vl_sift_get_keypoints(sift);
+      const int num_keypoints = vl_sift_get_nkeypoints(sift);
+      if (num_keypoints == 0) {
+        continue;
       }
-    }
 
-    // Detect keypoints.
-    vl_sift_detect(sift.get());
+      // Extract features with different orientations per DOG level.
+      size_t level_idx = 0;
+      int prev_level = -1;
+      for (int i = 0; i < num_keypoints; ++i) {
+        if (vl_keypoints[i].is != prev_level) {
+          if (i > 0) {
+            // Resize containers of previous DOG level.
+            level_keypoints.back().resize(level_idx);
+            if (descriptors != nullptr) {
+              level_descriptors.back().conservativeResize(level_idx, 128);
+            }
+          }
 
-    // Extract detected keypoints.
-    const VlSiftKeypoint* vl_keypoints = vl_sift_get_keypoints(sift.get());
-    const int num_keypoints = vl_sift_get_nkeypoints(sift.get());
-    if (num_keypoints == 0) {
-      continue;
-    }
-
-    // Extract features with different orientations per DOG level.
-    size_t level_idx = 0;
-    int prev_level = -1;
-    for (int i = 0; i < num_keypoints; ++i) {
-      if (vl_keypoints[i].is != prev_level) {
-        if (i > 0) {
-          // Resize containers of previous DOG level.
-          level_keypoints.back().resize(level_idx);
+          // Add containers for new DOG level.
+          level_idx = 0;
+          level_num_features.push_back(0);
+          level_keypoints.emplace_back(options.max_num_orientations *
+                                       num_keypoints);
           if (descriptors != nullptr) {
-            level_descriptors.back().conservativeResize(level_idx, 128);
+            level_descriptors.emplace_back(
+                options.max_num_orientations * num_keypoints, 128);
           }
         }
 
-        // Add containers for new DOG level.
-        level_idx = 0;
-        level_num_features.push_back(0);
-        level_keypoints.emplace_back(options.max_num_orientations *
-                                     num_keypoints);
-        if (descriptors != nullptr) {
-          level_descriptors.emplace_back(
-              options.max_num_orientations * num_keypoints, 128);
+        level_num_features.back() += 1;
+        prev_level = vl_keypoints[i].is;
+
+        // Extract feature orientations.
+        double angles[4];
+        int num_orientations;
+        if (options.upright) {
+          num_orientations = 1;
+          angles[0] = 0.0;
+        } else {
+          num_orientations = vl_sift_calc_keypoint_orientations(
+              sift, angles, &vl_keypoints[i]);
         }
-      }
 
-      level_num_features.back() += 1;
-      prev_level = vl_keypoints[i].is;
+        // Note that this is different from SiftGPU, which selects the top
+        // global maxima as orientations while this selects the first two
+        // local maxima. It is not clear which procedure is better.
+        const int num_used_orientations =
+            std::min(num_orientations, options.max_num_orientations);
 
-      // Extract feature orientations.
-      double angles[4];
-      int num_orientations;
-      if (options.upright) {
-        num_orientations = 1;
-        angles[0] = 0.0;
-      } else {
-        num_orientations = vl_sift_calc_keypoint_orientations(
-            sift.get(), angles, &vl_keypoints[i]);
-      }
+        for (int o = 0; o < num_used_orientations; ++o) {
+          level_keypoints.back()[level_idx] = FeatureKeypoint(
+              vl_keypoints[i].x + 0.5f, vl_keypoints[i].y + 0.5f,
+              vl_keypoints[i].sigma, angles[o]);
+          if (descriptors != nullptr) {
+            Eigen::MatrixXf desc(1, 128);
+            vl_sift_calc_keypoint_descriptor(sift, desc.data(),
+                                             &vl_keypoints[i], angles[o]);
+            if (options.normalization ==
+                SiftExtractionOptions::Normalization::L2) {
+              desc = L2NormalizeFeatureDescriptors(desc);
+            } else if (options.normalization ==
+                       SiftExtractionOptions::Normalization::L1_ROOT) {
+              desc = L1RootNormalizeFeatureDescriptors(desc);
+            } else {
+              LOG(FATAL) << "Normalization type not supported";
+            }
 
-      // Note that this is different from SiftGPU, which selects the top
-      // global maxima as orientations while this selects the first two
-      // local maxima. It is not clear which procedure is better.
-      const int num_used_orientations =
-          std::min(num_orientations, options.max_num_orientations);
-
-      for (int o = 0; o < num_used_orientations; ++o) {
-        level_keypoints.back()[level_idx] =
-            FeatureKeypoint(vl_keypoints[i].x + 0.5f, vl_keypoints[i].y + 0.5f,
-                            vl_keypoints[i].sigma, angles[o]);
-        if (descriptors != nullptr) {
-          Eigen::MatrixXf desc(1, 128);
-          vl_sift_calc_keypoint_descriptor(sift.get(), desc.data(),
-                                           &vl_keypoints[i], angles[o]);
-          if (options.normalization ==
-              SiftExtractionOptions::Normalization::L2) {
-            desc = L2NormalizeFeatureDescriptors(desc);
-          } else if (options.normalization ==
-                     SiftExtractionOptions::Normalization::L1_ROOT) {
-            desc = L1RootNormalizeFeatureDescriptors(desc);
-          } else {
-            LOG(FATAL) << "Normalization type not supported";
+            level_descriptors.back().row(level_idx) =
+                FeatureDescriptorsToUnsignedByte(desc);
           }
 
-          level_descriptors.back().row(level_idx) =
-              FeatureDescriptorsToUnsignedByte(desc);
+          level_idx += 1;
         }
-
-        level_idx += 1;
       }
-    }
 
-    // Resize containers for last DOG level in octave.
-    level_keypoints.back().resize(level_idx);
-    if (descriptors != nullptr) {
-      level_descriptors.back().conservativeResize(level_idx, 128);
+      // Resize containers for last DOG level in octave.
+      level_keypoints.back().resize(level_idx);
+      if (descriptors != nullptr) {
+        level_descriptors.back().conservativeResize(level_idx, 128);
+      }
     }
   }
 
@@ -976,9 +950,10 @@ void MatchSiftFeaturesCPUBruteForce(const SiftMatchingOptions& match_options,
 void MatchSiftFeaturesCPUFLANN(const SiftMatchingOptions& match_options,
                                const FeatureDescriptors& descriptors1,
                                const FeatureDescriptors& descriptors2,
-                               FeatureMatches* matches) {
-  CHECK(match_options.Check());
-  CHECK_NOTNULL(matches);
+                               FeatureMatches* matches,
+                               flann::Index<flann::L2<uint8_t>> &index) {
+  // CHECK(match_options.Check());
+  // CHECK_NOTNULL(matches);
 
   Eigen::Matrix<int, Eigen::Dynamic, Eigen::Dynamic, Eigen::RowMajor>
       indices_1to2;
@@ -990,10 +965,10 @@ void MatchSiftFeaturesCPUFLANN(const SiftMatchingOptions& match_options,
       distances_2to1;
 
   FindNearestNeighborsFLANN(descriptors1, descriptors2, &indices_1to2,
-                            &distances_1to2);
+                            &distances_1to2, index);
   if (match_options.cross_check) {
     FindNearestNeighborsFLANN(descriptors2, descriptors1, &indices_2to1,
-                              &distances_2to1);
+                              &distances_2to1, index);
   }
 
   FindBestMatchesFLANN(indices_1to2, distances_1to2, indices_2to1,
@@ -1006,7 +981,9 @@ void MatchSiftFeaturesCPU(const SiftMatchingOptions& match_options,
                           const FeatureDescriptors& descriptors1,
                           const FeatureDescriptors& descriptors2,
                           FeatureMatches* matches) {
-  MatchSiftFeaturesCPUFLANN(match_options, descriptors1, descriptors2, matches);
+  // MatchSiftFeaturesCPUFLANN(match_options, descriptors1, descriptors2,
+  // matches);
+  std::cout << "not implemented" << std::endl;
 }
 
 void MatchGuidedSiftFeaturesCPU(const SiftMatchingOptions& match_options,
@@ -1107,7 +1084,7 @@ bool CreateSiftGPUMatcher(const SiftMatchingOptions& match_options,
   } else {
     sift_match_gpu->SetLanguage(SiftMatchGPU::SIFTMATCH_CUDA);
   }
-#else   // CUDA_ENABLED
+#else  // CUDA_ENABLED
   sift_match_gpu->SetLanguage(SiftMatchGPU::SIFTMATCH_GLSL);
 #endif  // CUDA_ENABLED
 

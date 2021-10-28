@@ -35,7 +35,22 @@
 #include "estimators/two_view_geometry.h"
 #include "feature/types.h"
 #include "util/bitmap.h"
+#include <FLANN/algorithms/dist.h>
+#include <FLANN/flann.hpp>
 
+#include <array>
+#include <fstream>
+#include <memory>
+
+#include "SiftGPU/SiftGPU.h"
+#include "VLFeat/covdet.h"
+#include "VLFeat/sift.h"
+#include "feature/utils.h"
+#include "util/cuda.h"
+#include "util/logging.h"
+#include "util/math.h"
+#include "util/misc.h"
+#include "util/opengl_utils.h"
 class SiftGPU;
 class SiftMatchGPU;
 
@@ -168,7 +183,7 @@ struct SiftMatchingOptions {
 // descriptors if the given input is not NULL.
 bool ExtractSiftFeaturesCPU(const SiftExtractionOptions& options,
                             const Bitmap& bitmap, FeatureKeypoints* keypoints,
-                            FeatureDescriptors* descriptors);
+                            FeatureDescriptors* descriptors,VlSiftFilt* sift);
 bool ExtractCovariantSiftFeaturesCPU(const SiftExtractionOptions& options,
                                      const Bitmap& bitmap,
                                      FeatureKeypoints* keypoints,
@@ -218,7 +233,7 @@ void MatchSiftFeaturesCPUBruteForce(const SiftMatchingOptions& match_options,
 void MatchSiftFeaturesCPUFLANN(const SiftMatchingOptions& match_options,
                                const FeatureDescriptors& descriptors1,
                                const FeatureDescriptors& descriptors2,
-                               FeatureMatches* matches);
+                               FeatureMatches* matches,flann::Index<flann::L2<uint8_t>> &index);
 void MatchSiftFeaturesCPU(const SiftMatchingOptions& match_options,
                           const FeatureDescriptors& descriptors1,
                           const FeatureDescriptors& descriptors2,

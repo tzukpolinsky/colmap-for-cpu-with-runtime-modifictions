@@ -31,22 +31,26 @@
 
 # This script exports a COLMAP database to the file structure to run VisualSfM.
 
-import os
-import sys
 import argparse
-import sqlite3
+import os
 import shutil
-import gzip
+import sqlite3
+
 import numpy as np
+
+from Point3d import Point3d
 
 
 def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument("--database_path", required=True)
-    parser.add_argument("--image_path", required=True)
-    parser.add_argument("--output_path", required=True)
+    parser.add_argument("--SIFT", required=True)
+    parser.add_argument("--image_path", required=False)
+    parser.add_argument("--output_path", required=False)
+    parser.add_argument("--points3d_file_path", required=True)
+    parser.add_argument("--points3d_database_output_path", required=True)
     parser.add_argument("--min_num_matches", type=int, default=15)
-    parser.add_argument("--binary_feature_files", type=bool, default=True)
+    parser.add_argument("--binary_feature_files", type=bool, default=False)
     args = parser.parse_args()
     return args
 
@@ -57,14 +61,50 @@ def pair_id_to_image_ids(pair_id):
     return image_id1, image_id2
 
 
+def joinFileAndDatabase():
+    args = parse_args()
+    sizeOfDesc = 128 if args.SIFT == 1 else 32
+    connection = sqlite3.connect(args.database_path)
+    cursor = connection.cursor()
+    points3d = []
+    with open(args.points3d_file_path) as f:
+        for line in f.readlines()[3:]:
+            line = line.split(" ")
+            currentPoint = Point3d(int(line[0]), float(line[1]), float(line[2]),
+                                   float(line[3]), int(line[4]), int(line[5]), int(line[6]),
+                                   float(line[7]))
+            i = 8
+            while i < len(line):
+                imageId = int(line[i])
+                cursor.execute("SELECT data FROM descriptors WHERE image_id=?;",
+                               (imageId,))
+                row = next(cursor)
+
+                descriptors = np.fromstring(row[0], dtype=np.uint8).reshape(-1, sizeOfDesc)
+                currentPoint.descriptors.append(descriptors[int(line[i + 1])].ravel().tolist())
+                i += 2
+            points3d.append(currentPoint)
+    with open(args.points3d_database_output_path, "w") as f:
+        for point3d in points3d:
+            f.write(
+                "%d|%f|%f|%f|%d|%d|%d|%f|" % (point3d.pointId, point3d.x, point3d.y, point3d.z, point3d.r, point3d.g,
+                                              point3d.b, point3d.error))
+            for desc in point3d.descriptors:
+                f.write(" ".join(map(str, desc)))
+                f.write(",")
+            f.write("\n")
+
+    print("done")
+
+
 def main():
     args = parse_args()
 
-    connection = sqlite3.connect(args.database_path)
+    connection = sqlite3.connect("/home/rbdstudent/Documents/AI634/Models/ai634fork/database.db")
     cursor = connection.cursor()
 
     try:
-        os.makedirs(args.output_path)
+        os.makedirs("/home/rbdstudent/Documents/AI634/Models/ai634fork/siftOutput")
     except:
         pass
 
@@ -81,22 +121,22 @@ def main():
         image_id = row[0]
         camera_id = row[1]
         image_name = row[2]
-        print "Copying image", image_name
+        print("Copying image", image_name)
         images[image_id] = (len(images), image_name)
-        if not os.path.exists(os.path.join(args.output_path, image_name)):
-            shutil.copyfile(os.path.join(args.image_path, image_name),
-                            os.path.join(args.output_path, image_name))
+        if not os.path.exists(os.path.join("/home/rbdstudent/Documents/AI634/Models/ai634fork/siftOutput", image_name)):
+            shutil.copyfile(os.path.join("/home/rbdstudent/Documents/AI634/Models/ai634fork/images", image_name),
+                            os.path.join("/home/rbdstudent/Documents/AI634/Models/ai634fork/siftOutput", image_name))
 
     # The magic numbers used in VisualSfM's binary file format for storing the
     # feature descriptors.
     sift_name = 1413892435
     sift_version_v4 = 808334422
     sift_eof_marker = 1179600383
-
-    for image_id, (image_idx, image_name) in images.iteritems():
-        print "Exporting key file for", image_name
+    for image_id, (image_idx, image_name) in images.items():
+        print("Exporting key file for", image_name)
         base_name, ext = os.path.splitext(image_name)
-        key_file_name = os.path.join(args.output_path, base_name + ".sift")
+        key_file_name = os.path.join("/home/rbdstudent/Documents/AI634/Models/ai634fork/siftOutput",
+                                     base_name + ".sift")
         if os.path.exists(key_file_name):
             continue
 
@@ -107,7 +147,10 @@ def main():
             keypoints = np.zeros((0, 6), dtype=np.float32)
             descriptors = np.zeros((0, 128), dtype=np.uint8)
         else:
-            keypoints = np.fromstring(row[0], dtype=np.float32).reshape(-1, 6)
+            try:
+                keypoints = np.fromstring(row[0], dtype=np.float32).reshape(-1, 6)
+            except:
+                continue
             cursor.execute("SELECT data FROM descriptors WHERE image_id=?;",
                            (image_id,))
             row = next(cursor)
@@ -115,26 +158,26 @@ def main():
 
         if args.binary_feature_files:
             with open(key_file_name, "wb") as fid:
-                fid.write(struct.pack("i", sift_name))
+                """fid.write(struct.pack("i", sift_name))
                 fid.write(struct.pack("i", sift_version_v4))
                 fid.write(struct.pack("i", keypoints.shape[0]))
                 fid.write(struct.pack("i", 4))
                 fid.write(struct.pack("i", 128))
                 keypoints[:, :4].astype(np.float32).tofile(fid)
                 descriptors.astype(np.uint8).tofile(fid)
-                fid.write(struct.pack("i", sift_eof_marker))
+                fid.write(struct.pack("i", sift_eof_marker))"""
         else:
             with open(key_file_name, "w") as fid:
                 fid.write("%d %d\n" % (keypoints.shape[0],
                                        descriptors.shape[1]))
                 for r in range(keypoints.shape[0]):
-                    fid.write("%f %f 0 0 " % (keypoints[r, 0],
-                                              keypoints[r, 1]))
+                    fid.write("%d %f %f 0 0 " % (r, keypoints[r, 0],
+                                                 keypoints[r, 1]))
                     fid.write(" ".join(map(str,
                                            descriptors[r].ravel().tolist())))
                     fid.write("\n")
 
-    with open(os.path.join(args.output_path, "matches.txt"), "w") as fid:
+    with open(os.path.join("/home/rbdstudent/Documents/AI634/Models/ai634fork/siftOutput", "matches.txt"), "w") as fid:
         cursor.execute("SELECT pair_id, data FROM two_view_geometries "
                        "WHERE rows>=?;", (args.min_num_matches,))
         for row in cursor:
@@ -159,4 +202,5 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    # main()
+    joinFileAndDatabase()

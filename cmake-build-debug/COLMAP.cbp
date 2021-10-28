@@ -1,0 +1,3255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="COLMAP"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\cmake\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\usr\;CMake Files\..\..\..\usr\local\;CMake Files\..\..\..\usr\local\lib\;CMake Files\..\..\..\usr\local\lib\cmake\;CMake Files\..\..\..\usr\local\lib\cmake\Ceres\;CMake Files\..\..\..\usr\lib\;CMake Files\..\..\..\usr\lib\cmake\;CMake Files\..\..\..\usr\lib\cmake\eigen3\;CMake Files\..\..\..\usr\lib\x86_64-linux-gnu\;CMake Files\..\..\..\usr\lib\x86_64-linux-gnu\cmake\;CMake Files\..\..\..\usr\lib\x86_64-linux-gnu\cmake\gflags\;CMake Files\..\..\..\usr\lib\x86_64-linux-gnu\cmake\CGAL\;CMake Files\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5\;CMake Files\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Core\;CMake Files\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5OpenGL\;CMake Files\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Widgets\;CMake Files\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\;CMake Files\src\;CMake Files\src\util\;CMake Files\src\ui\;CMake Files\src\base\;CMake Files\src\controllers\;CMake Files\src\estimators\;CMake Files\src\exe\;CMake Files\src\feature\;CMake Files\src\mvs\;CMake Files\src\optim\;CMake Files\src\retrieval\;CMake Files\src\sfm\;CMake Files\src\tools\;CMake Files\lib\;CMake Files\lib\FLANN\;CMake Files\lib\Graclus\;CMake Files\lib\LSD\;CMake Files\lib\PBA\;CMake Files\lib\PoissonRecon\;CMake Files\lib\SiftGPU\;CMake Files\lib\SQLite\;CMake Files\lib\VLFeat\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/rbdstudent/colmap_full/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install/strip">
+				<Option working_dir="/home/rbdstudent/colmap_full/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/strip"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install/local">
+				<Option working_dir="/home/rbdstudent/colmap_full/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/local"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install">
+				<Option working_dir="/home/rbdstudent/colmap_full/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/Makefile&quot;  VERBOSE=1 install"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="list_install_components">
+				<Option working_dir="/home/rbdstudent/colmap_full/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/Makefile&quot;  VERBOSE=1 list_install_components"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="colmap_sources">
+				<Option output="/home/rbdstudent/colmap_full/cmake-build-debug/libcolmap_sources.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/rbdstudent/colmap_full/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DEIGEN_INITIALIZE_MATRICES_BY_NAN"/>
+					<Add option="-DOPENMP_ENABLED"/>
+					<Add option="-DOPENGL_ENABLED"/>
+					<Add option="-DCGAL_ENABLED"/>
+					<Add directory="/home/rbdstudent/colmap_full/lib"/>
+					<Add directory="/home/rbdstudent/colmap_full/src"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtCore"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtOpenGL"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtWidgets"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtGui"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/Makefile&quot;  VERBOSE=1 colmap_sources"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="colmap_sources/fast">
+				<Option output="/home/rbdstudent/colmap_full/cmake-build-debug/libcolmap_sources.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/rbdstudent/colmap_full/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DEIGEN_INITIALIZE_MATRICES_BY_NAN"/>
+					<Add option="-DOPENMP_ENABLED"/>
+					<Add option="-DOPENGL_ENABLED"/>
+					<Add option="-DCGAL_ENABLED"/>
+					<Add directory="/home/rbdstudent/colmap_full/lib"/>
+					<Add directory="/home/rbdstudent/colmap_full/src"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtCore"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtOpenGL"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtWidgets"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtGui"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/Makefile&quot;  VERBOSE=1 colmap_sources/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/rbdstudent/colmap_full/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="uninstall">
+				<Option working_dir="/home/rbdstudent/colmap_full/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/Makefile&quot;  VERBOSE=1 uninstall"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/rbdstudent/colmap_full/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="flann">
+				<Option output="/home/rbdstudent/colmap_full/cmake-build-debug/lib/FLANN/libflann.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/rbdstudent/colmap_full/cmake-build-debug/lib/FLANN"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DEIGEN_INITIALIZE_MATRICES_BY_NAN"/>
+					<Add option="-DOPENMP_ENABLED"/>
+					<Add option="-DOPENGL_ENABLED"/>
+					<Add option="-DCGAL_ENABLED"/>
+					<Add directory="/home/rbdstudent/colmap_full/lib"/>
+					<Add directory="/home/rbdstudent/colmap_full/src"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtCore"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtOpenGL"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtWidgets"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtGui"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/lib/FLANN/Makefile&quot;  VERBOSE=1 flann"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/lib/FLANN/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/lib/FLANN/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/lib/FLANN/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="flann/fast">
+				<Option output="/home/rbdstudent/colmap_full/cmake-build-debug/lib/FLANN/libflann.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/rbdstudent/colmap_full/cmake-build-debug/lib/FLANN"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DEIGEN_INITIALIZE_MATRICES_BY_NAN"/>
+					<Add option="-DOPENMP_ENABLED"/>
+					<Add option="-DOPENGL_ENABLED"/>
+					<Add option="-DCGAL_ENABLED"/>
+					<Add directory="/home/rbdstudent/colmap_full/lib"/>
+					<Add directory="/home/rbdstudent/colmap_full/src"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtCore"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtOpenGL"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtWidgets"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtGui"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/lib/FLANN/Makefile&quot;  VERBOSE=1 flann/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/lib/FLANN/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/lib/FLANN/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/lib/FLANN/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="graclus">
+				<Option output="/home/rbdstudent/colmap_full/cmake-build-debug/lib/Graclus/libgraclus.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/rbdstudent/colmap_full/cmake-build-debug/lib/Graclus"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DEIGEN_INITIALIZE_MATRICES_BY_NAN"/>
+					<Add option="-DOPENMP_ENABLED"/>
+					<Add option="-DOPENGL_ENABLED"/>
+					<Add option="-DCGAL_ENABLED"/>
+					<Add directory="/home/rbdstudent/colmap_full/lib"/>
+					<Add directory="/home/rbdstudent/colmap_full/src"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtCore"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtOpenGL"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtWidgets"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtGui"/>
+					<Add directory="/home/rbdstudent/colmap_full/lib/Graclus/."/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/lib/Graclus/Makefile&quot;  VERBOSE=1 graclus"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/lib/Graclus/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/lib/Graclus/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/lib/Graclus/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="graclus/fast">
+				<Option output="/home/rbdstudent/colmap_full/cmake-build-debug/lib/Graclus/libgraclus.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/rbdstudent/colmap_full/cmake-build-debug/lib/Graclus"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DEIGEN_INITIALIZE_MATRICES_BY_NAN"/>
+					<Add option="-DOPENMP_ENABLED"/>
+					<Add option="-DOPENGL_ENABLED"/>
+					<Add option="-DCGAL_ENABLED"/>
+					<Add directory="/home/rbdstudent/colmap_full/lib"/>
+					<Add directory="/home/rbdstudent/colmap_full/src"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtCore"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtOpenGL"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtWidgets"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtGui"/>
+					<Add directory="/home/rbdstudent/colmap_full/lib/Graclus/."/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/lib/Graclus/Makefile&quot;  VERBOSE=1 graclus/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/lib/Graclus/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/lib/Graclus/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/lib/Graclus/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="lsd">
+				<Option output="/home/rbdstudent/colmap_full/cmake-build-debug/lib/LSD/liblsd.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/rbdstudent/colmap_full/cmake-build-debug/lib/LSD"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DEIGEN_INITIALIZE_MATRICES_BY_NAN"/>
+					<Add option="-DOPENMP_ENABLED"/>
+					<Add option="-DOPENGL_ENABLED"/>
+					<Add option="-DCGAL_ENABLED"/>
+					<Add directory="/home/rbdstudent/colmap_full/lib"/>
+					<Add directory="/home/rbdstudent/colmap_full/src"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtCore"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtOpenGL"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtWidgets"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtGui"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/lib/LSD/Makefile&quot;  VERBOSE=1 lsd"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/lib/LSD/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/lib/LSD/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/lib/LSD/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="lsd/fast">
+				<Option output="/home/rbdstudent/colmap_full/cmake-build-debug/lib/LSD/liblsd.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/rbdstudent/colmap_full/cmake-build-debug/lib/LSD"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DEIGEN_INITIALIZE_MATRICES_BY_NAN"/>
+					<Add option="-DOPENMP_ENABLED"/>
+					<Add option="-DOPENGL_ENABLED"/>
+					<Add option="-DCGAL_ENABLED"/>
+					<Add directory="/home/rbdstudent/colmap_full/lib"/>
+					<Add directory="/home/rbdstudent/colmap_full/src"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtCore"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtOpenGL"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtWidgets"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtGui"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/lib/LSD/Makefile&quot;  VERBOSE=1 lsd/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/lib/LSD/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/lib/LSD/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/lib/LSD/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="pba">
+				<Option output="/home/rbdstudent/colmap_full/cmake-build-debug/lib/PBA/libpba.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/rbdstudent/colmap_full/cmake-build-debug/lib/PBA"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DEIGEN_INITIALIZE_MATRICES_BY_NAN"/>
+					<Add option="-DOPENMP_ENABLED"/>
+					<Add option="-DOPENGL_ENABLED"/>
+					<Add option="-DCGAL_ENABLED"/>
+					<Add option="-DPBA_NO_GPU"/>
+					<Add directory="/home/rbdstudent/colmap_full/lib"/>
+					<Add directory="/home/rbdstudent/colmap_full/src"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtCore"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtOpenGL"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtWidgets"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtGui"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/lib/PBA/Makefile&quot;  VERBOSE=1 pba"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/lib/PBA/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/lib/PBA/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/lib/PBA/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="pba/fast">
+				<Option output="/home/rbdstudent/colmap_full/cmake-build-debug/lib/PBA/libpba.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/rbdstudent/colmap_full/cmake-build-debug/lib/PBA"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DEIGEN_INITIALIZE_MATRICES_BY_NAN"/>
+					<Add option="-DOPENMP_ENABLED"/>
+					<Add option="-DOPENGL_ENABLED"/>
+					<Add option="-DCGAL_ENABLED"/>
+					<Add option="-DPBA_NO_GPU"/>
+					<Add directory="/home/rbdstudent/colmap_full/lib"/>
+					<Add directory="/home/rbdstudent/colmap_full/src"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtCore"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtOpenGL"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtWidgets"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtGui"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/lib/PBA/Makefile&quot;  VERBOSE=1 pba/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/lib/PBA/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/lib/PBA/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/lib/PBA/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="poisson_recon">
+				<Option output="/home/rbdstudent/colmap_full/cmake-build-debug/lib/PoissonRecon/libpoisson_recon.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/rbdstudent/colmap_full/cmake-build-debug/lib/PoissonRecon"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DEIGEN_INITIALIZE_MATRICES_BY_NAN"/>
+					<Add option="-DOPENMP_ENABLED"/>
+					<Add option="-DOPENGL_ENABLED"/>
+					<Add option="-DCGAL_ENABLED"/>
+					<Add option="-DRELEASE"/>
+					<Add directory="/home/rbdstudent/colmap_full/lib"/>
+					<Add directory="/home/rbdstudent/colmap_full/src"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtCore"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtOpenGL"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtWidgets"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtGui"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/lib/PoissonRecon/Makefile&quot;  VERBOSE=1 poisson_recon"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/lib/PoissonRecon/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/lib/PoissonRecon/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/lib/PoissonRecon/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="poisson_recon/fast">
+				<Option output="/home/rbdstudent/colmap_full/cmake-build-debug/lib/PoissonRecon/libpoisson_recon.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/rbdstudent/colmap_full/cmake-build-debug/lib/PoissonRecon"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DEIGEN_INITIALIZE_MATRICES_BY_NAN"/>
+					<Add option="-DOPENMP_ENABLED"/>
+					<Add option="-DOPENGL_ENABLED"/>
+					<Add option="-DCGAL_ENABLED"/>
+					<Add option="-DRELEASE"/>
+					<Add directory="/home/rbdstudent/colmap_full/lib"/>
+					<Add directory="/home/rbdstudent/colmap_full/src"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtCore"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtOpenGL"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtWidgets"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtGui"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/lib/PoissonRecon/Makefile&quot;  VERBOSE=1 poisson_recon/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/lib/PoissonRecon/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/lib/PoissonRecon/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/lib/PoissonRecon/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="sift_gpu">
+				<Option output="/home/rbdstudent/colmap_full/cmake-build-debug/lib/SiftGPU/libsift_gpu.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/rbdstudent/colmap_full/cmake-build-debug/lib/SiftGPU"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DEIGEN_INITIALIZE_MATRICES_BY_NAN"/>
+					<Add option="-DOPENMP_ENABLED"/>
+					<Add option="-DOPENGL_ENABLED"/>
+					<Add option="-DCGAL_ENABLED"/>
+					<Add option="-DSIFTGPU_NO_DEVIL"/>
+					<Add directory="/home/rbdstudent/colmap_full/lib"/>
+					<Add directory="/home/rbdstudent/colmap_full/src"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtCore"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtOpenGL"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtWidgets"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtGui"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/lib/SiftGPU/Makefile&quot;  VERBOSE=1 sift_gpu"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/lib/SiftGPU/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/lib/SiftGPU/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/lib/SiftGPU/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="sift_gpu/fast">
+				<Option output="/home/rbdstudent/colmap_full/cmake-build-debug/lib/SiftGPU/libsift_gpu.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/rbdstudent/colmap_full/cmake-build-debug/lib/SiftGPU"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DEIGEN_INITIALIZE_MATRICES_BY_NAN"/>
+					<Add option="-DOPENMP_ENABLED"/>
+					<Add option="-DOPENGL_ENABLED"/>
+					<Add option="-DCGAL_ENABLED"/>
+					<Add option="-DSIFTGPU_NO_DEVIL"/>
+					<Add directory="/home/rbdstudent/colmap_full/lib"/>
+					<Add directory="/home/rbdstudent/colmap_full/src"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtCore"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtOpenGL"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtWidgets"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtGui"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/lib/SiftGPU/Makefile&quot;  VERBOSE=1 sift_gpu/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/lib/SiftGPU/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/lib/SiftGPU/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/lib/SiftGPU/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="sqlite3">
+				<Option output="/home/rbdstudent/colmap_full/cmake-build-debug/lib/SQLite/libsqlite3.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/rbdstudent/colmap_full/cmake-build-debug/lib/SQLite"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DEIGEN_INITIALIZE_MATRICES_BY_NAN"/>
+					<Add option="-DOPENMP_ENABLED"/>
+					<Add option="-DOPENGL_ENABLED"/>
+					<Add option="-DCGAL_ENABLED"/>
+					<Add option="-DSQLITE_THREADSAFE=1"/>
+					<Add directory="/home/rbdstudent/colmap_full/lib"/>
+					<Add directory="/home/rbdstudent/colmap_full/src"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtCore"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtOpenGL"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtWidgets"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtGui"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/lib/SQLite/Makefile&quot;  VERBOSE=1 sqlite3"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/lib/SQLite/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/lib/SQLite/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/lib/SQLite/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="sqlite3/fast">
+				<Option output="/home/rbdstudent/colmap_full/cmake-build-debug/lib/SQLite/libsqlite3.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/rbdstudent/colmap_full/cmake-build-debug/lib/SQLite"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DEIGEN_INITIALIZE_MATRICES_BY_NAN"/>
+					<Add option="-DOPENMP_ENABLED"/>
+					<Add option="-DOPENGL_ENABLED"/>
+					<Add option="-DCGAL_ENABLED"/>
+					<Add option="-DSQLITE_THREADSAFE=1"/>
+					<Add directory="/home/rbdstudent/colmap_full/lib"/>
+					<Add directory="/home/rbdstudent/colmap_full/src"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtCore"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtOpenGL"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtWidgets"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtGui"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/lib/SQLite/Makefile&quot;  VERBOSE=1 sqlite3/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/lib/SQLite/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/lib/SQLite/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/lib/SQLite/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="vlfeat">
+				<Option output="/home/rbdstudent/colmap_full/cmake-build-debug/lib/VLFeat/libvlfeat.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/rbdstudent/colmap_full/cmake-build-debug/lib/VLFeat"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DEIGEN_INITIALIZE_MATRICES_BY_NAN"/>
+					<Add option="-DOPENMP_ENABLED"/>
+					<Add option="-DOPENGL_ENABLED"/>
+					<Add option="-DCGAL_ENABLED"/>
+					<Add directory="/home/rbdstudent/colmap_full/lib"/>
+					<Add directory="/home/rbdstudent/colmap_full/src"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtCore"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtOpenGL"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtWidgets"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtGui"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/lib/VLFeat/Makefile&quot;  VERBOSE=1 vlfeat"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/lib/VLFeat/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/lib/VLFeat/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/lib/VLFeat/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="vlfeat/fast">
+				<Option output="/home/rbdstudent/colmap_full/cmake-build-debug/lib/VLFeat/libvlfeat.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/rbdstudent/colmap_full/cmake-build-debug/lib/VLFeat"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DEIGEN_INITIALIZE_MATRICES_BY_NAN"/>
+					<Add option="-DOPENMP_ENABLED"/>
+					<Add option="-DOPENGL_ENABLED"/>
+					<Add option="-DCGAL_ENABLED"/>
+					<Add directory="/home/rbdstudent/colmap_full/lib"/>
+					<Add directory="/home/rbdstudent/colmap_full/src"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtCore"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtOpenGL"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtWidgets"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtGui"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/lib/VLFeat/Makefile&quot;  VERBOSE=1 vlfeat/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/lib/VLFeat/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/lib/VLFeat/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/lib/VLFeat/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="colmap">
+				<Option output="/home/rbdstudent/colmap_full/cmake-build-debug/src/libcolmap.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/rbdstudent/colmap_full/cmake-build-debug/src"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DEIGEN_INITIALIZE_MATRICES_BY_NAN"/>
+					<Add option="-DOPENMP_ENABLED"/>
+					<Add option="-DOPENGL_ENABLED"/>
+					<Add option="-DCGAL_ENABLED"/>
+					<Add option="-DCERES_EXPORT_INTERNAL_SYMBOLS"/>
+					<Add option="-DGFLAGS_IS_A_DLL=0"/>
+					<Add option="-DQT_CORE_LIB"/>
+					<Add option="-DQT_OPENGL_LIB"/>
+					<Add option="-DQT_WIDGETS_LIB"/>
+					<Add option="-DQT_GUI_LIB"/>
+					<Add directory="/home/rbdstudent/colmap_full/lib"/>
+					<Add directory="/home/rbdstudent/colmap_full/src"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtCore"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtOpenGL"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtWidgets"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtGui"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 colmap"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="colmap/fast">
+				<Option output="/home/rbdstudent/colmap_full/cmake-build-debug/src/libcolmap.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/rbdstudent/colmap_full/cmake-build-debug/src"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DEIGEN_INITIALIZE_MATRICES_BY_NAN"/>
+					<Add option="-DOPENMP_ENABLED"/>
+					<Add option="-DOPENGL_ENABLED"/>
+					<Add option="-DCGAL_ENABLED"/>
+					<Add option="-DCERES_EXPORT_INTERNAL_SYMBOLS"/>
+					<Add option="-DGFLAGS_IS_A_DLL=0"/>
+					<Add option="-DQT_CORE_LIB"/>
+					<Add option="-DQT_OPENGL_LIB"/>
+					<Add option="-DQT_WIDGETS_LIB"/>
+					<Add option="-DQT_GUI_LIB"/>
+					<Add directory="/home/rbdstudent/colmap_full/lib"/>
+					<Add directory="/home/rbdstudent/colmap_full/src"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtCore"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtOpenGL"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtWidgets"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtGui"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 colmap/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="colmap_exe">
+				<Option output="/home/rbdstudent/colmap_full/cmake-build-debug/src/exe/colmap" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/rbdstudent/colmap_full/cmake-build-debug/src/exe"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DEIGEN_INITIALIZE_MATRICES_BY_NAN"/>
+					<Add option="-DOPENMP_ENABLED"/>
+					<Add option="-DOPENGL_ENABLED"/>
+					<Add option="-DCGAL_ENABLED"/>
+					<Add option="-DCERES_EXPORT_INTERNAL_SYMBOLS"/>
+					<Add option="-DGFLAGS_IS_A_DLL=0"/>
+					<Add option="-DQT_CORE_LIB"/>
+					<Add option="-DQT_OPENGL_LIB"/>
+					<Add option="-DQT_WIDGETS_LIB"/>
+					<Add option="-DQT_GUI_LIB"/>
+					<Add directory="/home/rbdstudent/colmap_full/lib"/>
+					<Add directory="/home/rbdstudent/colmap_full/src"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtCore"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtOpenGL"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtWidgets"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtGui"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/src/exe/Makefile&quot;  VERBOSE=1 colmap_exe"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/src/exe/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/src/exe/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/src/exe/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="colmap_exe/fast">
+				<Option output="/home/rbdstudent/colmap_full/cmake-build-debug/src/exe/colmap" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/rbdstudent/colmap_full/cmake-build-debug/src/exe"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DEIGEN_INITIALIZE_MATRICES_BY_NAN"/>
+					<Add option="-DOPENMP_ENABLED"/>
+					<Add option="-DOPENGL_ENABLED"/>
+					<Add option="-DCGAL_ENABLED"/>
+					<Add option="-DCERES_EXPORT_INTERNAL_SYMBOLS"/>
+					<Add option="-DGFLAGS_IS_A_DLL=0"/>
+					<Add option="-DQT_CORE_LIB"/>
+					<Add option="-DQT_OPENGL_LIB"/>
+					<Add option="-DQT_WIDGETS_LIB"/>
+					<Add option="-DQT_GUI_LIB"/>
+					<Add directory="/home/rbdstudent/colmap_full/lib"/>
+					<Add directory="/home/rbdstudent/colmap_full/src"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtCore"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtOpenGL"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtWidgets"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtGui"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/src/exe/Makefile&quot;  VERBOSE=1 colmap_exe/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/src/exe/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/src/exe/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/rbdstudent/colmap_full/cmake-build-debug/src/exe/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/rbdstudent/colmap_full/cmake-build-debug/src/colmap_autogen/UYX5XTB5RZ/qrc_resources.cpp">
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/cmake-build-debug/src/colmap_autogen/UYX5XTB5RZ/qrc_resources.cpp.rule">
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/FLANN/config.h">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/FLANN/defines.h">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/FLANN/ext/lz4.c">
+			<Option target="flann"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/FLANN/ext/lz4.h">
+			<Option target="flann"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/FLANN/ext/lz4hc.c">
+			<Option target="flann"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/FLANN/ext/lz4hc.h">
+			<Option target="flann"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/FLANN/flann.cpp">
+			<Option target="colmap_sources"/>
+			<Option target="flann"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/FLANN/flann.h">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/FLANN/flann.hpp">
+			<Option target="colmap_sources"/>
+			<Option target="flann"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/FLANN/general.h">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/Graclus/metisLib/balance.c">
+			<Option target="graclus"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/Graclus/metisLib/bucketsort.c">
+			<Option target="graclus"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/Graclus/metisLib/ccgraph.c">
+			<Option target="graclus"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/Graclus/metisLib/coarsen.c">
+			<Option target="graclus"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/Graclus/metisLib/compress.c">
+			<Option target="graclus"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/Graclus/metisLib/debug.c">
+			<Option target="graclus"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/Graclus/metisLib/defs.h">
+			<Option target="graclus"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/Graclus/metisLib/estmem.c">
+			<Option target="graclus"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/Graclus/metisLib/fm.c">
+			<Option target="graclus"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/Graclus/metisLib/fortran.c">
+			<Option target="graclus"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/Graclus/metisLib/frename.c">
+			<Option target="graclus"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/Graclus/metisLib/graph.c">
+			<Option target="graclus"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/Graclus/metisLib/initpart.c">
+			<Option target="graclus"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/Graclus/metisLib/kmetis.c">
+			<Option target="graclus"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/Graclus/metisLib/kvmetis.c">
+			<Option target="graclus"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/Graclus/metisLib/kwayfm.c">
+			<Option target="graclus"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/Graclus/metisLib/kwayrefine.c">
+			<Option target="graclus"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/Graclus/metisLib/kwayvolfm.c">
+			<Option target="graclus"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/Graclus/metisLib/kwayvolrefine.c">
+			<Option target="graclus"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/Graclus/metisLib/macros.h">
+			<Option target="graclus"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/Graclus/metisLib/match.c">
+			<Option target="graclus"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/Graclus/metisLib/mbalance.c">
+			<Option target="graclus"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/Graclus/metisLib/mbalance2.c">
+			<Option target="graclus"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/Graclus/metisLib/mcoarsen.c">
+			<Option target="graclus"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/Graclus/metisLib/memory.c">
+			<Option target="graclus"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/Graclus/metisLib/mesh.c">
+			<Option target="graclus"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/Graclus/metisLib/meshpart.c">
+			<Option target="graclus"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/Graclus/metisLib/metis.c">
+			<Option target="graclus"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/Graclus/metisLib/metis.h">
+			<Option target="graclus"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/Graclus/metisLib/mfm.c">
+			<Option target="graclus"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/Graclus/metisLib/mfm2.c">
+			<Option target="graclus"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/Graclus/metisLib/mincover.c">
+			<Option target="graclus"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/Graclus/metisLib/minitpart.c">
+			<Option target="graclus"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/Graclus/metisLib/minitpart2.c">
+			<Option target="graclus"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/Graclus/metisLib/mkmetis.c">
+			<Option target="graclus"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/Graclus/metisLib/mkwayfmh.c">
+			<Option target="graclus"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/Graclus/metisLib/mkwayrefine.c">
+			<Option target="graclus"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/Graclus/metisLib/mmatch.c">
+			<Option target="graclus"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/Graclus/metisLib/mmd.c">
+			<Option target="graclus"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/Graclus/metisLib/mpmetis.c">
+			<Option target="graclus"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/Graclus/metisLib/mrefine.c">
+			<Option target="graclus"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/Graclus/metisLib/mrefine2.c">
+			<Option target="graclus"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/Graclus/metisLib/mutil.c">
+			<Option target="graclus"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/Graclus/metisLib/myqsort.c">
+			<Option target="graclus"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/Graclus/metisLib/ometis.c">
+			<Option target="graclus"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/Graclus/metisLib/parmetis.c">
+			<Option target="graclus"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/Graclus/metisLib/pmetis.c">
+			<Option target="graclus"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/Graclus/metisLib/pqueue.c">
+			<Option target="graclus"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/Graclus/metisLib/proto.h">
+			<Option target="graclus"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/Graclus/metisLib/refine.c">
+			<Option target="graclus"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/Graclus/metisLib/rename.h">
+			<Option target="graclus"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/Graclus/metisLib/separator.c">
+			<Option target="graclus"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/Graclus/metisLib/sfm.c">
+			<Option target="graclus"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/Graclus/metisLib/srefine.c">
+			<Option target="graclus"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/Graclus/metisLib/stat.c">
+			<Option target="graclus"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/Graclus/metisLib/struct.h">
+			<Option target="graclus"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/Graclus/metisLib/subdomains.c">
+			<Option target="graclus"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/Graclus/metisLib/timing.c">
+			<Option target="graclus"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/Graclus/metisLib/util.c">
+			<Option target="graclus"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/Graclus/multilevelLib/mlkkm.c">
+			<Option target="graclus"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/Graclus/multilevelLib/wkkm.c">
+			<Option target="graclus"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/LSD/lsd.c">
+			<Option target="colmap_sources"/>
+			<Option target="lsd"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/LSD/lsd.h">
+			<Option target="colmap_sources"/>
+			<Option target="lsd"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/PBA/ConfigBA.cpp">
+			<Option target="colmap_sources"/>
+			<Option target="pba"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/PBA/ConfigBA.h">
+			<Option target="colmap_sources"/>
+			<Option target="pba"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/PBA/CuTexImage.cpp">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/PBA/CuTexImage.h">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/PBA/DataInterface.h">
+			<Option target="colmap_sources"/>
+			<Option target="pba"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/PBA/ProgramCU.cu">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/PBA/ProgramCU.h">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/PBA/SparseBundleCPU.cpp">
+			<Option target="colmap_sources"/>
+			<Option target="pba"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/PBA/SparseBundleCPU.h">
+			<Option target="colmap_sources"/>
+			<Option target="pba"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/PBA/SparseBundleCU.cpp">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/PBA/SparseBundleCU.h">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/PBA/pba.cpp">
+			<Option target="colmap_sources"/>
+			<Option target="pba"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/PBA/pba.h">
+			<Option target="colmap_sources"/>
+			<Option target="pba"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/PBA/util.h">
+			<Option target="colmap_sources"/>
+			<Option target="pba"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/PoissonRecon/Allocator.h">
+			<Option target="colmap_sources"/>
+			<Option target="poisson_recon"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/PoissonRecon/Array.h">
+			<Option target="colmap_sources"/>
+			<Option target="poisson_recon"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/PoissonRecon/Array.inl">
+			<Option target="colmap_sources"/>
+			<Option target="poisson_recon"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/PoissonRecon/BSplineData.h">
+			<Option target="colmap_sources"/>
+			<Option target="poisson_recon"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/PoissonRecon/BSplineData.inl">
+			<Option target="colmap_sources"/>
+			<Option target="poisson_recon"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/PoissonRecon/BinaryNode.h">
+			<Option target="colmap_sources"/>
+			<Option target="poisson_recon"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/PoissonRecon/CmdLineParser.cpp">
+			<Option target="colmap_sources"/>
+			<Option target="poisson_recon"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/PoissonRecon/CmdLineParser.h">
+			<Option target="colmap_sources"/>
+			<Option target="poisson_recon"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/PoissonRecon/CmdLineParser.inl">
+			<Option target="colmap_sources"/>
+			<Option target="poisson_recon"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/PoissonRecon/Factor.cpp">
+			<Option target="colmap_sources"/>
+			<Option target="poisson_recon"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/PoissonRecon/Factor.h">
+			<Option target="colmap_sources"/>
+			<Option target="poisson_recon"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/PoissonRecon/FunctionData.h">
+			<Option target="colmap_sources"/>
+			<Option target="poisson_recon"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/PoissonRecon/FunctionData.inl">
+			<Option target="colmap_sources"/>
+			<Option target="poisson_recon"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/PoissonRecon/Geometry.cpp">
+			<Option target="colmap_sources"/>
+			<Option target="poisson_recon"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/PoissonRecon/Geometry.h">
+			<Option target="colmap_sources"/>
+			<Option target="poisson_recon"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/PoissonRecon/Geometry.inl">
+			<Option target="colmap_sources"/>
+			<Option target="poisson_recon"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/PoissonRecon/Hash.h">
+			<Option target="colmap_sources"/>
+			<Option target="poisson_recon"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/PoissonRecon/MAT.h">
+			<Option target="colmap_sources"/>
+			<Option target="poisson_recon"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/PoissonRecon/MAT.inl">
+			<Option target="colmap_sources"/>
+			<Option target="poisson_recon"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/PoissonRecon/MarchingCubes.cpp">
+			<Option target="colmap_sources"/>
+			<Option target="poisson_recon"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/PoissonRecon/MarchingCubes.h">
+			<Option target="colmap_sources"/>
+			<Option target="poisson_recon"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/PoissonRecon/MemoryUsage.h">
+			<Option target="colmap_sources"/>
+			<Option target="poisson_recon"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/PoissonRecon/MultiGridOctreeData.Evaluation.inl">
+			<Option target="colmap_sources"/>
+			<Option target="poisson_recon"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/PoissonRecon/MultiGridOctreeData.IsoSurface.inl">
+			<Option target="colmap_sources"/>
+			<Option target="poisson_recon"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/PoissonRecon/MultiGridOctreeData.SortedTreeNodes.inl">
+			<Option target="colmap_sources"/>
+			<Option target="poisson_recon"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/PoissonRecon/MultiGridOctreeData.System.inl">
+			<Option target="colmap_sources"/>
+			<Option target="poisson_recon"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/PoissonRecon/MultiGridOctreeData.WeightedSamples.inl">
+			<Option target="colmap_sources"/>
+			<Option target="poisson_recon"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/PoissonRecon/MultiGridOctreeData.h">
+			<Option target="colmap_sources"/>
+			<Option target="poisson_recon"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/PoissonRecon/MultiGridOctreeData.inl">
+			<Option target="colmap_sources"/>
+			<Option target="poisson_recon"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/PoissonRecon/MyTime.h">
+			<Option target="colmap_sources"/>
+			<Option target="poisson_recon"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/PoissonRecon/Octree.h">
+			<Option target="colmap_sources"/>
+			<Option target="poisson_recon"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/PoissonRecon/Octree.inl">
+			<Option target="colmap_sources"/>
+			<Option target="poisson_recon"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/PoissonRecon/PPolynomial.h">
+			<Option target="colmap_sources"/>
+			<Option target="poisson_recon"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/PoissonRecon/PPolynomial.inl">
+			<Option target="colmap_sources"/>
+			<Option target="poisson_recon"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/PoissonRecon/Ply.h">
+			<Option target="colmap_sources"/>
+			<Option target="poisson_recon"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/PoissonRecon/PlyFile.cpp">
+			<Option target="colmap_sources"/>
+			<Option target="poisson_recon"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/PoissonRecon/PointStream.h">
+			<Option target="colmap_sources"/>
+			<Option target="poisson_recon"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/PoissonRecon/PointStream.inl">
+			<Option target="colmap_sources"/>
+			<Option target="poisson_recon"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/PoissonRecon/PoissonRecon.cpp">
+			<Option target="colmap_sources"/>
+			<Option target="poisson_recon"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/PoissonRecon/PoissonRecon.h">
+			<Option target="colmap_sources"/>
+			<Option target="poisson_recon"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/PoissonRecon/Polynomial.h">
+			<Option target="colmap_sources"/>
+			<Option target="poisson_recon"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/PoissonRecon/Polynomial.inl">
+			<Option target="colmap_sources"/>
+			<Option target="poisson_recon"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/PoissonRecon/SparseMatrix.h">
+			<Option target="colmap_sources"/>
+			<Option target="poisson_recon"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/PoissonRecon/SparseMatrix.inl">
+			<Option target="colmap_sources"/>
+			<Option target="poisson_recon"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/PoissonRecon/SurfaceTrimmer.cpp">
+			<Option target="colmap_sources"/>
+			<Option target="poisson_recon"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/PoissonRecon/SurfaceTrimmer.h">
+			<Option target="colmap_sources"/>
+			<Option target="poisson_recon"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/SQLite/shell.c">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/SQLite/sqlite3.c">
+			<Option target="colmap_sources"/>
+			<Option target="sqlite3"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/SQLite/sqlite3.h">
+			<Option target="colmap_sources"/>
+			<Option target="sqlite3"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/SQLite/sqlite3ext.h">
+			<Option target="colmap_sources"/>
+			<Option target="sqlite3"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/SiftGPU/CLTexImage.cpp">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/SiftGPU/CLTexImage.h">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/SiftGPU/CuTexImage.cpp">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/SiftGPU/CuTexImage.h">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/SiftGPU/FrameBufferObject.cpp">
+			<Option target="colmap_sources"/>
+			<Option target="sift_gpu"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/SiftGPU/FrameBufferObject.h">
+			<Option target="colmap_sources"/>
+			<Option target="sift_gpu"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/SiftGPU/GLTexImage.cpp">
+			<Option target="colmap_sources"/>
+			<Option target="sift_gpu"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/SiftGPU/GLTexImage.h">
+			<Option target="colmap_sources"/>
+			<Option target="sift_gpu"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/SiftGPU/GlobalUtil.cpp">
+			<Option target="colmap_sources"/>
+			<Option target="sift_gpu"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/SiftGPU/GlobalUtil.h">
+			<Option target="colmap_sources"/>
+			<Option target="sift_gpu"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/SiftGPU/LiteWindow.h">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/SiftGPU/ProgramCG.cpp">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/SiftGPU/ProgramCG.h">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/SiftGPU/ProgramCL.cpp">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/SiftGPU/ProgramCL.h">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/SiftGPU/ProgramCU.cu">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/SiftGPU/ProgramCU.h">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/SiftGPU/ProgramGLSL.cpp">
+			<Option target="colmap_sources"/>
+			<Option target="sift_gpu"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/SiftGPU/ProgramGLSL.h">
+			<Option target="colmap_sources"/>
+			<Option target="sift_gpu"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/SiftGPU/ProgramGPU.h">
+			<Option target="colmap_sources"/>
+			<Option target="sift_gpu"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/SiftGPU/PyramidCL.cpp">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/SiftGPU/PyramidCL.h">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/SiftGPU/PyramidCU.cpp">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/SiftGPU/PyramidCU.h">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/SiftGPU/PyramidGL.cpp">
+			<Option target="colmap_sources"/>
+			<Option target="sift_gpu"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/SiftGPU/PyramidGL.h">
+			<Option target="colmap_sources"/>
+			<Option target="sift_gpu"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/SiftGPU/ShaderMan.cpp">
+			<Option target="colmap_sources"/>
+			<Option target="sift_gpu"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/SiftGPU/ShaderMan.h">
+			<Option target="colmap_sources"/>
+			<Option target="sift_gpu"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/SiftGPU/SiftGPU.cpp">
+			<Option target="colmap_sources"/>
+			<Option target="sift_gpu"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/SiftGPU/SiftGPU.h">
+			<Option target="colmap_sources"/>
+			<Option target="sift_gpu"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/SiftGPU/SiftMatch.cpp">
+			<Option target="colmap_sources"/>
+			<Option target="sift_gpu"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/SiftGPU/SiftMatch.h">
+			<Option target="colmap_sources"/>
+			<Option target="sift_gpu"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/SiftGPU/SiftMatchCU.cpp">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/SiftGPU/SiftMatchCU.h">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/SiftGPU/SiftPyramid.cpp">
+			<Option target="colmap_sources"/>
+			<Option target="sift_gpu"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/SiftGPU/SiftPyramid.h">
+			<Option target="colmap_sources"/>
+			<Option target="sift_gpu"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/VLFeat/aib.c">
+			<Option target="colmap_sources"/>
+			<Option target="vlfeat"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/VLFeat/aib.h">
+			<Option target="colmap_sources"/>
+			<Option target="vlfeat"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/VLFeat/array.c">
+			<Option target="colmap_sources"/>
+			<Option target="vlfeat"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/VLFeat/array.h">
+			<Option target="colmap_sources"/>
+			<Option target="vlfeat"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/VLFeat/covdet.c">
+			<Option target="colmap_sources"/>
+			<Option target="vlfeat"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/VLFeat/covdet.h">
+			<Option target="colmap_sources"/>
+			<Option target="vlfeat"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/VLFeat/dsift.c">
+			<Option target="colmap_sources"/>
+			<Option target="vlfeat"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/VLFeat/dsift.h">
+			<Option target="colmap_sources"/>
+			<Option target="vlfeat"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/VLFeat/fisher.c">
+			<Option target="colmap_sources"/>
+			<Option target="vlfeat"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/VLFeat/fisher.h">
+			<Option target="colmap_sources"/>
+			<Option target="vlfeat"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/VLFeat/float.h">
+			<Option target="colmap_sources"/>
+			<Option target="vlfeat"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/VLFeat/generic.c">
+			<Option target="colmap_sources"/>
+			<Option target="vlfeat"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/VLFeat/generic.h">
+			<Option target="colmap_sources"/>
+			<Option target="vlfeat"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/VLFeat/getopt_long.c">
+			<Option target="colmap_sources"/>
+			<Option target="vlfeat"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/VLFeat/getopt_long.h">
+			<Option target="colmap_sources"/>
+			<Option target="vlfeat"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/VLFeat/gmm.c">
+			<Option target="colmap_sources"/>
+			<Option target="vlfeat"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/VLFeat/gmm.h">
+			<Option target="colmap_sources"/>
+			<Option target="vlfeat"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/VLFeat/heap-def.h">
+			<Option target="colmap_sources"/>
+			<Option target="vlfeat"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/VLFeat/hikmeans.c">
+			<Option target="colmap_sources"/>
+			<Option target="vlfeat"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/VLFeat/hikmeans.h">
+			<Option target="colmap_sources"/>
+			<Option target="vlfeat"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/VLFeat/hog.c">
+			<Option target="colmap_sources"/>
+			<Option target="vlfeat"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/VLFeat/hog.h">
+			<Option target="colmap_sources"/>
+			<Option target="vlfeat"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/VLFeat/homkermap.c">
+			<Option target="colmap_sources"/>
+			<Option target="vlfeat"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/VLFeat/homkermap.h">
+			<Option target="colmap_sources"/>
+			<Option target="vlfeat"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/VLFeat/host.c">
+			<Option target="colmap_sources"/>
+			<Option target="vlfeat"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/VLFeat/host.h">
+			<Option target="colmap_sources"/>
+			<Option target="vlfeat"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/VLFeat/ikmeans.c">
+			<Option target="colmap_sources"/>
+			<Option target="vlfeat"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/VLFeat/ikmeans.h">
+			<Option target="colmap_sources"/>
+			<Option target="vlfeat"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/VLFeat/ikmeans_elkan.tc">
+			<Option target="colmap_sources"/>
+			<Option target="vlfeat"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/VLFeat/ikmeans_init.tc">
+			<Option target="colmap_sources"/>
+			<Option target="vlfeat"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/VLFeat/ikmeans_lloyd.tc">
+			<Option target="colmap_sources"/>
+			<Option target="vlfeat"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/VLFeat/imopv.c">
+			<Option target="colmap_sources"/>
+			<Option target="vlfeat"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/VLFeat/imopv.h">
+			<Option target="colmap_sources"/>
+			<Option target="vlfeat"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/VLFeat/imopv_sse2.c">
+			<Option target="colmap_sources"/>
+			<Option target="vlfeat"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/VLFeat/imopv_sse2.h">
+			<Option target="colmap_sources"/>
+			<Option target="vlfeat"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/VLFeat/kdtree.c">
+			<Option target="colmap_sources"/>
+			<Option target="vlfeat"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/VLFeat/kdtree.h">
+			<Option target="colmap_sources"/>
+			<Option target="vlfeat"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/VLFeat/kmeans.c">
+			<Option target="colmap_sources"/>
+			<Option target="vlfeat"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/VLFeat/kmeans.h">
+			<Option target="colmap_sources"/>
+			<Option target="vlfeat"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/VLFeat/lbp.c">
+			<Option target="colmap_sources"/>
+			<Option target="vlfeat"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/VLFeat/lbp.h">
+			<Option target="colmap_sources"/>
+			<Option target="vlfeat"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/VLFeat/liop.c">
+			<Option target="colmap_sources"/>
+			<Option target="vlfeat"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/VLFeat/liop.h">
+			<Option target="colmap_sources"/>
+			<Option target="vlfeat"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/VLFeat/mathop.c">
+			<Option target="colmap_sources"/>
+			<Option target="vlfeat"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/VLFeat/mathop.h">
+			<Option target="colmap_sources"/>
+			<Option target="vlfeat"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/VLFeat/mathop_avx.c">
+			<Option target="colmap_sources"/>
+			<Option target="vlfeat"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/VLFeat/mathop_avx.h">
+			<Option target="colmap_sources"/>
+			<Option target="vlfeat"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/VLFeat/mathop_sse2.c">
+			<Option target="colmap_sources"/>
+			<Option target="vlfeat"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/VLFeat/mathop_sse2.h">
+			<Option target="colmap_sources"/>
+			<Option target="vlfeat"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/VLFeat/mser.c">
+			<Option target="colmap_sources"/>
+			<Option target="vlfeat"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/VLFeat/mser.h">
+			<Option target="colmap_sources"/>
+			<Option target="vlfeat"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/VLFeat/pgm.c">
+			<Option target="colmap_sources"/>
+			<Option target="vlfeat"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/VLFeat/pgm.h">
+			<Option target="colmap_sources"/>
+			<Option target="vlfeat"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/VLFeat/qsort-def.h">
+			<Option target="colmap_sources"/>
+			<Option target="vlfeat"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/VLFeat/quickshift.c">
+			<Option target="colmap_sources"/>
+			<Option target="vlfeat"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/VLFeat/quickshift.h">
+			<Option target="colmap_sources"/>
+			<Option target="vlfeat"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/VLFeat/random.c">
+			<Option target="colmap_sources"/>
+			<Option target="vlfeat"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/VLFeat/random.h">
+			<Option target="colmap_sources"/>
+			<Option target="vlfeat"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/VLFeat/rodrigues.c">
+			<Option target="colmap_sources"/>
+			<Option target="vlfeat"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/VLFeat/rodrigues.h">
+			<Option target="colmap_sources"/>
+			<Option target="vlfeat"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/VLFeat/scalespace.c">
+			<Option target="colmap_sources"/>
+			<Option target="vlfeat"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/VLFeat/scalespace.h">
+			<Option target="colmap_sources"/>
+			<Option target="vlfeat"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/VLFeat/shuffle-def.h">
+			<Option target="colmap_sources"/>
+			<Option target="vlfeat"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/VLFeat/sift.c">
+			<Option target="colmap_sources"/>
+			<Option target="vlfeat"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/VLFeat/sift.h">
+			<Option target="colmap_sources"/>
+			<Option target="vlfeat"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/VLFeat/slic.c">
+			<Option target="colmap_sources"/>
+			<Option target="vlfeat"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/VLFeat/slic.h">
+			<Option target="colmap_sources"/>
+			<Option target="vlfeat"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/VLFeat/stringop.c">
+			<Option target="colmap_sources"/>
+			<Option target="vlfeat"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/VLFeat/stringop.h">
+			<Option target="colmap_sources"/>
+			<Option target="vlfeat"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/VLFeat/svm.c">
+			<Option target="colmap_sources"/>
+			<Option target="vlfeat"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/VLFeat/svm.h">
+			<Option target="colmap_sources"/>
+			<Option target="vlfeat"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/VLFeat/svmdataset.c">
+			<Option target="colmap_sources"/>
+			<Option target="vlfeat"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/VLFeat/svmdataset.h">
+			<Option target="colmap_sources"/>
+			<Option target="vlfeat"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/VLFeat/vlad.c">
+			<Option target="colmap_sources"/>
+			<Option target="vlfeat"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/VLFeat/vlad.h">
+			<Option target="colmap_sources"/>
+			<Option target="vlfeat"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/base/camera.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/base/camera.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/base/camera_database.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/base/camera_database.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/base/camera_database_test.cc">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/base/camera_models.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/base/camera_models.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/base/camera_models_test.cc">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/base/camera_rig.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/base/camera_rig.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/base/camera_rig_test.cc">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/base/camera_test.cc">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/base/correspondence_graph.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/base/correspondence_graph.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/base/correspondence_graph_test.cc">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/base/cost_functions.h">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/base/cost_functions_test.cc">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/base/database.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/base/database.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/base/database_cache.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/base/database_cache.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/base/database_cache_test.cc">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/base/database_test.cc">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/base/essential_matrix.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/base/essential_matrix.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/base/essential_matrix_test.cc">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/base/gps.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/base/gps.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/base/gps_test.cc">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/base/graph_cut.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/base/graph_cut.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/base/graph_cut_test.cc">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/base/homography_matrix.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/base/homography_matrix.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/base/homography_matrix_test.cc">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/base/image.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/base/image.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/base/image_reader.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/base/image_reader.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/base/image_test.cc">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/base/line.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/base/line.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/base/line_test.cc">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/base/point2d.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/base/point2d.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/base/point2d_test.cc">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/base/point3d.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/base/point3d.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/base/point3d_test.cc">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/base/polynomial.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/base/polynomial.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/base/polynomial_test.cc">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/base/pose.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/base/pose.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/base/pose_test.cc">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/base/projection.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/base/projection.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/base/projection_test.cc">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/base/reconstruction.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/base/reconstruction.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/base/reconstruction_manager.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/base/reconstruction_manager.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/base/reconstruction_manager_test.cc">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/base/reconstruction_test.cc">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/base/scene_clustering.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/base/scene_clustering.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/base/scene_clustering_test.cc">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/base/similarity_transform.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/base/similarity_transform.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/base/similarity_transform_test.cc">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/base/track.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/base/track.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/base/track_test.cc">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/base/triangulation.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/base/triangulation.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/base/triangulation_test.cc">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/base/undistortion.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/base/undistortion.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/base/undistortion_test.cc">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/base/visibility_pyramid.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/base/visibility_pyramid.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/base/visibility_pyramid_test.cc">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/base/warp.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/base/warp.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/base/warp_test.cc">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/controllers/automatic_reconstruction.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/controllers/automatic_reconstruction.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/controllers/bundle_adjustment.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/controllers/bundle_adjustment.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/controllers/hierarchical_mapper.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/controllers/hierarchical_mapper.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/controllers/incremental_mapper.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/controllers/incremental_mapper.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/estimators/absolute_pose.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/estimators/absolute_pose.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/estimators/absolute_pose_test.cc">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/estimators/affine_transform.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/estimators/affine_transform.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/estimators/affine_transform_test.cc">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/estimators/coordinate_frame.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/estimators/coordinate_frame.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/estimators/coordinate_frame_test.cc">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/estimators/essential_matrix.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/estimators/essential_matrix.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/estimators/essential_matrix_coeffs.h">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/estimators/essential_matrix_poly.h">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/estimators/essential_matrix_test.cc">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/estimators/euclidean_transform.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/estimators/fundamental_matrix.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/estimators/fundamental_matrix.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/estimators/fundamental_matrix_test.cc">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/estimators/generalized_absolute_pose.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/estimators/generalized_absolute_pose.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/estimators/generalized_absolute_pose_coeffs.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/estimators/generalized_absolute_pose_coeffs.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/estimators/generalized_absolute_pose_test.cc">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/estimators/generalized_relative_pose.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/estimators/generalized_relative_pose.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/estimators/generalized_relative_pose_test.cc">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/estimators/homography_matrix.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/estimators/homography_matrix.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/estimators/homography_matrix_test.cc">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/estimators/pose.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/estimators/pose.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/estimators/similarity_transform.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/estimators/translation_transform.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/estimators/translation_transform_test.cc">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/estimators/triangulation.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/estimators/triangulation.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/estimators/two_view_geometry.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/estimators/two_view_geometry.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/estimators/two_view_geometry_test.cc">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/estimators/utils.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/estimators/utils.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/estimators/utils_test.cc">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/exe/colmap.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap_exe"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/feature/extraction.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/feature/extraction.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/feature/matching.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/feature/matching.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/feature/sift.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/feature/sift.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/feature/sift_test.cc">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/feature/types.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/feature/types.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/feature/types_test.cc">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/feature/utils.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/feature/utils.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/feature/utils_test.cc">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/mvs/consistency_graph.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/mvs/consistency_graph.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/mvs/consistency_graph_test.cc">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/mvs/cuda_array_wrapper.h">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/mvs/cuda_flip.h">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/mvs/cuda_rotate.h">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/mvs/cuda_transpose.h">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/mvs/depth_map.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/mvs/depth_map.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/mvs/depth_map_test.cc">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/mvs/fusion.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/mvs/fusion.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/mvs/gpu_mat.h">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/mvs/gpu_mat_prng.cu">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/mvs/gpu_mat_prng.h">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/mvs/gpu_mat_ref_image.cu">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/mvs/gpu_mat_ref_image.h">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/mvs/gpu_mat_test.cu">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/mvs/image.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/mvs/image.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/mvs/mat.h">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/mvs/mat_test.cc">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/mvs/meshing.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/mvs/meshing.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/mvs/model.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/mvs/model.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/mvs/normal_map.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/mvs/normal_map.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/mvs/normal_map_test.cc">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/mvs/patch_match.cc">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/mvs/patch_match.h">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/mvs/patch_match_cuda.cu">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/mvs/patch_match_cuda.h">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/mvs/workspace.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/mvs/workspace.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/optim/bundle_adjustment.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/optim/bundle_adjustment.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/optim/bundle_adjustment_test.cc">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/optim/combination_sampler.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/optim/combination_sampler.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/optim/combination_sampler_test.cc">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/optim/least_absolute_deviations.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/optim/least_absolute_deviations.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/optim/least_absolute_deviations_test.cc">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/optim/loransac.h">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/optim/loransac_test.cc">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/optim/progressive_sampler.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/optim/progressive_sampler.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/optim/progressive_sampler_test.cc">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/optim/random_sampler.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/optim/random_sampler.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/optim/random_sampler_test.cc">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/optim/ransac.h">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/optim/ransac_test.cc">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/optim/sampler.h">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/optim/sprt.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/optim/sprt.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/optim/support_measurement.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/optim/support_measurement.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/optim/support_measurement_test.cc">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/retrieval/geometry.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/retrieval/geometry.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/retrieval/geometry_test.cc">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/retrieval/inverted_file.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/retrieval/inverted_file_entry.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/retrieval/inverted_file_entry_test.cc">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/retrieval/inverted_index.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/retrieval/utils.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/retrieval/visual_index.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/retrieval/visual_index_test.cc">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/retrieval/vote_and_verify.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/retrieval/vote_and_verify.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/sfm/incremental_mapper.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/sfm/incremental_mapper.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/sfm/incremental_triangulator.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/sfm/incremental_triangulator.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/tools/example.cc">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/ui/automatic_reconstruction_widget.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/ui/automatic_reconstruction_widget.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/ui/bundle_adjustment_widget.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/ui/bundle_adjustment_widget.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/ui/colormaps.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/ui/colormaps.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/ui/database_management_widget.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/ui/database_management_widget.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/ui/dense_reconstruction_widget.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/ui/dense_reconstruction_widget.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/ui/feature_extraction_widget.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/ui/feature_extraction_widget.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/ui/feature_matching_widget.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/ui/feature_matching_widget.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/ui/image_viewer_widget.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/ui/image_viewer_widget.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/ui/license_widget.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/ui/license_widget.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/ui/line_painter.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/ui/line_painter.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/ui/log_widget.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/ui/log_widget.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/ui/main_window.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/ui/main_window.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/ui/match_matrix_widget.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/ui/match_matrix_widget.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/ui/model_viewer_widget.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/ui/model_viewer_widget.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/ui/movie_grabber_widget.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/ui/movie_grabber_widget.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/ui/options_widget.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/ui/options_widget.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/ui/point_painter.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/ui/point_painter.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/ui/point_viewer_widget.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/ui/point_viewer_widget.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/ui/project_widget.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/ui/project_widget.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/ui/qt_utils.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/ui/qt_utils.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/ui/reconstruction_manager_widget.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/ui/reconstruction_manager_widget.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/ui/reconstruction_options_widget.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/ui/reconstruction_options_widget.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/ui/reconstruction_stats_widget.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/ui/reconstruction_stats_widget.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/ui/render_options.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/ui/render_options.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/ui/render_options_widget.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/ui/render_options_widget.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/ui/resources.qrc">
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/ui/thread_control_widget.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/ui/thread_control_widget.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/ui/triangle_painter.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/ui/triangle_painter.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/ui/undistortion_widget.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/ui/undistortion_widget.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/util/alignment.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/util/bitmap.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/util/bitmap.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/util/bitmap_test.cc">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/util/cache.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/util/cache_test.cc">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/util/camera_specs.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/util/camera_specs.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/util/cuda.cc">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/util/cuda.h">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/util/cudacc.cc">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/util/cudacc.h">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/util/endian.h">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/util/endian_test.cc">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/util/logging.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/util/logging.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/util/math.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/util/math.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/util/math_test.cc">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/util/matrix.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/util/matrix_test.cc">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/util/misc.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/util/misc.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/util/misc_test.cc">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/util/opengl_utils.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/util/opengl_utils.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/util/opengl_utils_test.cc">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/util/option_manager.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/util/option_manager.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/util/ply.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/util/ply.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/util/random.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/util/random.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/util/random_test.cc">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/util/sqlite3_utils.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/util/string.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/util/string.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/util/string_test.cc">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/util/testing.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/util/threading.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/util/threading.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/util/threading_test.cc">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/util/timer.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/util/timer.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/util/timer_test.cc">
+			<Option target="colmap_sources"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/util/types.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/util/version.cc">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/util/version.h">
+			<Option target="colmap_sources"/>
+			<Option target="colmap"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/cmake/CMakeConfig.cmake.in">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/cmake/CMakeConfigVersion.cmake.in">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/cmake/CMakeHelper.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/cmake/CMakeUninstall.cmake.in">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/cmake/FindEigen3.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/cmake/FindFreeImage.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/cmake/FindGlew.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/cmake/FindGlog.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/cmake/GenerateVersionDefinitions.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/../../../usr/local/lib/cmake/Ceres/CeresConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\usr\local\lib\cmake\Ceres\"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/../../../usr/local/lib/cmake/Ceres/CeresConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\usr\local\lib\cmake\Ceres\"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/../../../usr/local/lib/cmake/Ceres/CeresTargets-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\usr\local\lib\cmake\Ceres\"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/../../../usr/local/lib/cmake/Ceres/CeresTargets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\usr\local\lib\cmake\Ceres\"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/../../../usr/local/lib/cmake/Ceres/FindGlog.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\usr\local\lib\cmake\Ceres\"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/../../../usr/lib/cmake/eigen3/Eigen3Config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\usr\lib\cmake\eigen3\"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/../../../usr/lib/cmake/eigen3/Eigen3ConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\usr\lib\cmake\eigen3\"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/../../../usr/lib/cmake/eigen3/Eigen3Targets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\usr\lib\cmake\eigen3\"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/../../../usr/lib/x86_64-linux-gnu/cmake/gflags/gflags-config-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\usr\lib\x86_64-linux-gnu\cmake\gflags\"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/../../../usr/lib/x86_64-linux-gnu/cmake/gflags/gflags-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\usr\lib\x86_64-linux-gnu\cmake\gflags\"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/../../../usr/lib/x86_64-linux-gnu/cmake/gflags/gflags-targets-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\usr\lib\x86_64-linux-gnu\cmake\gflags\"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/../../../usr/lib/x86_64-linux-gnu/cmake/gflags/gflags-targets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\usr\lib\x86_64-linux-gnu\cmake\gflags\"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/../../../usr/lib/x86_64-linux-gnu/cmake/CGAL/CGALConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\usr\lib\x86_64-linux-gnu\cmake\CGAL\"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/../../../usr/lib/x86_64-linux-gnu/cmake/CGAL/CGALConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\usr\lib\x86_64-linux-gnu\cmake\CGAL\"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/../../../usr/lib/x86_64-linux-gnu/cmake/CGAL/CGALExports-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\usr\lib\x86_64-linux-gnu\cmake\CGAL\"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/../../../usr/lib/x86_64-linux-gnu/cmake/CGAL/CGALExports.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\usr\lib\x86_64-linux-gnu\cmake\CGAL\"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/../../../usr/lib/x86_64-linux-gnu/cmake/CGAL/CGALLibConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\usr\lib\x86_64-linux-gnu\cmake\CGAL\"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/../../../usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5Config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5\"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/../../../usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5ConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5\"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/../../../usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5ModuleLocation.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5\"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Core\"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigExtras.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Core\"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigExtrasMkspecDir.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Core\"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Core\"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreMacros.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Core\"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/../../../usr/lib/x86_64-linux-gnu/cmake/Qt5OpenGL/Qt5OpenGLConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5OpenGL\"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/../../../usr/lib/x86_64-linux-gnu/cmake/Qt5OpenGL/Qt5OpenGLConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5OpenGL\"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Widgets\"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfigExtras.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Widgets\"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Widgets\"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsMacros.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Widgets\"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5GuiConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5GuiConfigExtras.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5GuiConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/util/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\util\"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/util/version.h.in">
+			<Option virtualFolder="CMake Files\src\util\"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/ui/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\ui\"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/ui/resources.qrc">
+			<Option virtualFolder="CMake Files\src\ui\"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/base/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\base\"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/controllers/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\controllers\"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/estimators/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\estimators\"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/exe/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\exe\"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/feature/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\feature\"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/mvs/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\mvs\"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/optim/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\optim\"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/retrieval/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\retrieval\"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/sfm/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\sfm\"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/src/tools/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\tools\"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/FLANN/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\FLANN\"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/Graclus/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Graclus\"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/LSD/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\LSD\"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/PBA/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\PBA\"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/PoissonRecon/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\PoissonRecon\"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/SiftGPU/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\SiftGPU\"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/SQLite/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\SQLite\"/>
+		</Unit>
+		<Unit filename="/home/rbdstudent/colmap_full/lib/VLFeat/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\VLFeat\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

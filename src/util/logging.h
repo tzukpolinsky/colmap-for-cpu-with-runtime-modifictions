@@ -35,7 +35,7 @@
 #include <iostream>
 
 #include <glog/logging.h>
-
+#include <cstring>
 #include "util/string.h"
 
 // Option checker macros. In contrast to glog, this function does not abort the
